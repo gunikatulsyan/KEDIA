@@ -20,7 +20,10 @@ const AdminInquiries = () => {
     }
   };
 
-  useEffect(() => { load(); }, []);
+useEffect(() => {
+  load();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
   const remove = async (id) => {
     if (!window.confirm('Delete this inquiry?')) return;
